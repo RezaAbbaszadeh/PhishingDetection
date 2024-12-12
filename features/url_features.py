@@ -6,12 +6,20 @@ def extract_url_features(url):
     features = {}
 
     # Call each feature category function and update the features dictionary
+    # https://doi.org/10.1016/j.dib.2020.106438.
+    # https://www.sciencedirect.com/science/article/pii/S2352340920313202
     features.update(extract_whole_url_features(url))
     features.update(extract_domain_features(url))
     features.update(extract_directory_features(url))
     features.update(extract_file_features(url))
     features.update(extract_parameter_features(url))
     features.update(external_metrics(url))
+
+    # https://doi.org/10.1016/j.ins.2019.01.064.
+    # (https://www.sciencedirect.com/science/article/pii/S0020025519300763)
+    features.update(extract_features_from_hybrid_paper(url))
+
+    
 
     return features
 
@@ -37,6 +45,7 @@ def extract_domain_features(url):
     features["domain_length"] = len(domain)
     features["domain_in_ip"] = int(re.match(r"^(\d{1,3}\.){3}\d{1,3}$", domain) is not None)
     features["server_client_domain"] = int("server" in domain or "client" in domain)
+    features["subdomain_level"] = domain.count('.')
 
     return features
 
@@ -90,6 +99,44 @@ def external_metrics(url):
         "url_google_index": -1,
         "domain_google_index": -1,
         "url_shortened": int("bit.ly" in url or "tinyurl" in url)
+    }
+
+    return features
+
+
+
+def extract_features_from_hybrid_paper(url):
+    parsed = urlparse(url)
+    domain = parsed.netloc
+    path = parsed.path
+    query = parsed.query
+
+    features = {
+        "num_dots": url.count('.'),
+        "subdomain_level": domain.count('.'),
+        "path_level": path.count('/') - 1,
+        "url_length": len(url),
+        "num_dash": url.count('-'),
+        "num_dash_in_hostname": domain.count('-'),
+        "at_symbol": int('@' in url),
+        "tilde_symbol": int('~' in url),
+        "num_underscore": url.count('_'),
+        "num_percent": url.count('%'),
+        "num_query_components": query.count('&') + 1 if query else 0,
+        "num_ampersand": url.count('&'),
+        "num_hash": url.count('#'),
+        "num_numeric_chars": sum(c.isdigit() for c in url),
+        "no_https": int(parsed.scheme != 'https'),
+        "random_string": int(bool(re.search(r'[a-zA-Z]{10,}', domain))),
+        "ip_address": int(bool(re.match(r"^(\d{1,3}\.){3}\d{1,3}$", domain))),
+        "domain_in_subdomains": int(any(tld in domain for tld in [".com", ".net", ".org", ".edu", ".gov"])),
+        "domain_in_paths": int(any(tld in path for tld in [".com", ".net", ".org", ".edu", ".gov"])),
+        "https_in_hostname": int("https" in domain),
+        "hostname_length": len(domain),
+        "path_length": len(path),
+        "query_length": len(query),
+        "double_slash_in_path": int('//' in path),
+        "num_sensitive_words": int(any(word in url.lower() for word in ["secure", "account", "webscr", "login", "ebayisapi", "signin", "banking", "confirm"])),
     }
 
     return features
