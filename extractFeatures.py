@@ -4,7 +4,7 @@ from features.url_features import extract_url_features
 from features.html_features import extract_website_features
 
 input_csv = 'dataset/dm.csv' 
-output_csv = 'features.csv'
+output_csv = 'features/features.csv'
 
 # Read the input CSV file
 df = pd.read_csv(input_csv)
@@ -25,8 +25,8 @@ c=0
 # Iterate over each row in the dataframe
 for index, row in df.iterrows():
     c+=1
-    print(c)
-    if c==10:
+    # print(c)
+    if c==1000:
         break
     # Extract features from the URL
     url_features = extract_url_features(row['url'])
