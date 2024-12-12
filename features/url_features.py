@@ -2,6 +2,8 @@ import re
 from urllib.parse import urlparse
 import requests
 
+top_tlds = [".com", ".org", ".net", ".int", ".edu", ".gov", ".mil", ".co", ".io", ".biz", ".info", ".us", ".uk", ".de", ".cn", ".fr", ".au", ".ru", ".jp", ".in"]
+
 def extract_url_features(url):
     features = {}
 
@@ -19,7 +21,9 @@ def extract_url_features(url):
     # (https://www.sciencedirect.com/science/article/pii/S0020025519300763)
     features.update(extract_features_from_hybrid_paper(url))
 
-    
+    # https://doi.org/10.1016/j.eswa.2014.03.019
+    # (https://www.sciencedirect.com/science/article/pii/S0957417414001481)
+    features.update(features_from_associative_classification_paper(url))
 
     return features
 
@@ -77,7 +81,7 @@ def extract_parameter_features(url):
     special_chars = ['.', '-', '_', '/', '?', '=', '@', '&', '!', ' ', '~', ',', '+', '*', '#', '$', '%']
     features = {f"qty_{char}_params": query.count(char) for char in special_chars}
     features["params_length"] = len(query)
-    features["tld_present_params"] = int(any(re.search(rf"\b{tld}\b", query) for tld in [".com", ".net", ".org", ".edu", ".gov", ".io", ".co", ".uk", ".us"]))
+    features["tld_present_params"] = int(any(re.search(rf"\b{tld}\b", query) for tld in top_tlds))
     features["qty_params"] = query.count('&') + 1 if query else 0
 
     return features
@@ -103,8 +107,6 @@ def external_metrics(url):
 
     return features
 
-
-
 def extract_features_from_hybrid_paper(url):
     parsed = urlparse(url)
     domain = parsed.netloc
@@ -129,8 +131,8 @@ def extract_features_from_hybrid_paper(url):
         "no_https": int(parsed.scheme != 'https'),
         "random_string": int(bool(re.search(r'[a-zA-Z]{10,}', domain))),
         "ip_address": int(bool(re.match(r"^(\d{1,3}\.){3}\d{1,3}$", domain))),
-        "domain_in_subdomains": int(any(tld in domain for tld in [".com", ".net", ".org", ".edu", ".gov"])),
-        "domain_in_paths": int(any(tld in path for tld in [".com", ".net", ".org", ".edu", ".gov"])),
+        "domain_in_subdomains": sum(1 for part in url.split('.')[:-1] if f".{part}" in top_tlds),
+        "domain_in_paths": int(any(tld in path for tld in top_tlds)),
         "https_in_hostname": int("https" in domain),
         "hostname_length": len(domain),
         "path_length": len(path),
@@ -141,6 +143,26 @@ def extract_features_from_hybrid_paper(url):
 
     return features
 
+
+def features_from_associative_classification_paper(url):
+    parsed = urlparse(url)
+    domain = parsed.netloc
+    path = parsed.path
+
+    features = {
+        "ip_address_in_url": int(bool(re.match(r"^(\d{1,3}\.){3}\d{1,3}$", domain))),
+        "long_url": int(len(url) > 54),
+        "at_symbol_in_url": int('@' in url),
+        "prefix_suffix_in_domain": int('-' in domain),
+        "subdomain_count": domain.count('.'),
+        # "abnormal_url": int(not bool(re.match(r"^(https?|ftp)://[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", url))), # Query WHOIS database
+        # "dns_record": int(bool(domain)),  # Simulated as presence of domain
+        # "age_of_domain": -1  # Placeholder for WHOIS lookup
+    }
+
+    return features
+
 # Example usage
-url = "http://example.com/path/to/resource/index.php?query=reza@gmail.c&gewfwe"
+url = "http://example.com.ca.hello.au.fr.com/path/to/resource/index.php?query=reza@gmail.c&gewfwe"
 print(len(extract_url_features(url)))
+print(extract_url_features(url)['domain_in_subdomains'])
