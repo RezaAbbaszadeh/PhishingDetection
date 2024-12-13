@@ -20,62 +20,64 @@ def extract_website_features(website, url):
     # If file is not found in any zip, return default values
     return default_values
 
-
 def parse_html_and_extract_features(html_content, url):
     soup = BeautifulSoup(html_content, 'html.parser')
     parsed_url = urlparse(url)
-    features = {}
     base_domain = parsed_url.netloc
 
+    features = {}
+    features.update(extract_script_css_img_anchor_features(soup)) # F1,F2,F3,F4
+    features.update(extract_empty_and_null_hyperlinks_features(soup)) # F7,F8,F9
+    features.update(extract_internal_external_features(soup, base_domain)) # F10,F11,F12
+    features.update(extract_login_form_features(soup, base_domain)) # F14,F15
+
+    return features
+
+def extract_script_css_img_anchor_features(soup):
+    total_hyperlinks = len(soup.find_all(['a', 'link', 'script', 'img']))
     script_files = soup.find_all('script', src=True)
     css_files = soup.find_all('link', rel='stylesheet')
     img_files = soup.find_all('img', src=True)
     anchor_files = soup.find_all('a', href=True)
 
-    total_hyperlinks = len(soup.find_all(['a', 'link', 'script', 'img']))
-    
-    features['script_files_ratio'] = len(script_files) / total_hyperlinks if total_hyperlinks > 0 else 0
-    features['css_files_ratio'] = len(css_files) / total_hyperlinks if total_hyperlinks > 0 else 0
-    features['image_files_ratio'] = len(img_files) / total_hyperlinks if total_hyperlinks > 0 else 0
-    features['anchor_files_ratio'] = len(anchor_files) / total_hyperlinks if total_hyperlinks > 0 else 0
-    
+    return {
+        'script_files_ratio': len(script_files) / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'css_files_ratio': len(css_files) / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'image_files_ratio': len(img_files) / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'anchor_files_ratio': len(anchor_files) / total_hyperlinks if total_hyperlinks > 0 else 0
+    }
 
+def extract_empty_and_null_hyperlinks_features(soup):
     all_tags = soup.find_all(['a', 'script', 'link', 'img'])
     total_hyperlinks = len(all_tags)
     empty_anchor_count = 0
     null_hyperlink_count = 0
 
     for tag in all_tags:
-        # For anchor tags, use 'href'
         if tag.name == 'a':
             href = tag.get('href')
             if href is None:
                 empty_anchor_count += 1
             if href is None or href in ['', '#', '#content', 'javascript:void(0);']:
                 null_hyperlink_count += 1
-        # For other tags, use 'src' or 'href'
         else:
             src_or_href = tag.get('src') or tag.get('href')
             if src_or_href is None or src_or_href in ['', '#', '#content', 'javascript:void(0);']:
                 null_hyperlink_count += 1
 
-    # Feature 7: Empty Anchor Ratio
-    features['empty_anchor_ratio'] = empty_anchor_count / total_hyperlinks if total_hyperlinks > 0 else 0
+    return {
+        'empty_anchor_ratio': empty_anchor_count / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'null_hyperlink_ratio': null_hyperlink_count / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'total_hyperlinks': total_hyperlinks
+    }
 
-    # Feature 8: Null Hyperlink Ratio
-    features['null_hyperlink_ratio'] = null_hyperlink_count / total_hyperlinks if total_hyperlinks > 0 else 0
-
-    # Feature F9: Total hyperlinks
-    features['total_hyperlinks'] = total_hyperlinks
-    
-
+def extract_internal_external_features(soup, base_domain):
     all_tags = soup.find_all(['a', 'script', 'link', 'img', 'form'])
     total_hyperlinks = len(all_tags)
     internal_hyperlinks = 0
     external_hyperlinks = 0
 
     for tag in all_tags:
-        # Extract href or src based on tag type
         url = tag.get('href') or tag.get('src') or tag.get('action')
         if url:
             parsed_url = urlparse(url)
@@ -84,38 +86,30 @@ def parse_html_and_extract_features(html_content, url):
             else:
                 external_hyperlinks += 1
 
-    # Feature 10: Internal Hyperlink Ratio
-    features['internal_hyperlink_ratio'] = internal_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0
+    return {
+        'internal_hyperlink_ratio': internal_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'external_hyperlink_ratio': external_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0,
+        'external_to_internal_ratio': external_hyperlinks / internal_hyperlinks if internal_hyperlinks > 0 else 0
+    }
 
-    # Feature 11: External Hyperlink Ratio
-    features['external_hyperlink_ratio'] = external_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0
-
-    # Feature 12: External to Internal Ratio
-    features['external_to_internal_ratio'] = external_hyperlinks / internal_hyperlinks if internal_hyperlinks > 0 else 0
-
-
+def extract_login_form_features(soup, base_domain):
     forms = soup.find_all('form')
     total_forms = len(forms)
     suspicious_forms = 0
+
     for form in forms:
         action_url = form.get('action')
         if action_url is None or action_url.strip() == "":
-            # Action is null or empty
             suspicious_forms += 1
         else:
             parsed_action_url = urlparse(action_url)
             if not parsed_action_url.netloc or base_domain not in parsed_action_url.netloc:
-                # Action is external or invalid
                 suspicious_forms += 1
-    # Feature F14: Total forms
-    features['total_forms'] = total_forms
-    # Feature F15: Suspicious form ratio
-    features['suspicious_form_ratio'] = suspicious_forms / total_forms if total_forms > 0 else 0
-    
 
-    return features
-
-
+    return {
+        'total_forms': total_forms,
+        'suspicious_form_ratio': suspicious_forms / total_forms if total_forms > 0 else 0
+    }
 
 
 
