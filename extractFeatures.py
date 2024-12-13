@@ -32,7 +32,7 @@ for index, row in df.iterrows():
     url_features = extract_url_features(row['url'])
 
     # Extract features from the website
-    website_features = extract_website_features(row['website'])
+    website_features = extract_website_features(row['website'], row['url'])
 
     # Process the created_date column
     date_features = process_created_date(row['created_date'])

@@ -7,7 +7,6 @@ top_tlds = [".com", ".org", ".net", ".int", ".edu", ".gov", ".mil", ".co", ".io"
 def extract_url_features(url):
     features = {}
 
-    # Call each feature category function and update the features dictionary
     # https://doi.org/10.1016/j.dib.2020.106438.
     # https://www.sciencedirect.com/science/article/pii/S2352340920313202
     features.update(extract_whole_url_features(url))

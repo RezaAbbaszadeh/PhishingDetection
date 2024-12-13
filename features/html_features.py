@@ -1,39 +1,151 @@
 from bs4 import BeautifulSoup
 import zipfile
+import re
+from urllib.parse import urlparse
 
-# Paths to the zip files
 zip_files = [(f'dataset-part-{i}', zipfile.ZipFile(f"dataset/dataset_part_{i}.zip", 'r')) for i in range(1, 9)]
-
-
 default_values = {
         'html_title': None,
         'num_links': None,
         'num_images': None
     }
 
-def extract_website_features(website):
+def extract_website_features(website, url):
     for base_folder, zip_file in zip_files:
         file_path_in_zip = f'{base_folder}/{website}'
         if file_path_in_zip in zip_file.namelist():
             with zip_file.open(file_path_in_zip) as file:
                 html_content = file.read()
-                return parse_html_and_extract_features(html_content)
+                return parse_html_and_extract_features(html_content, url)
     # If file is not found in any zip, return default values
     return default_values
 
 
-def parse_html_and_extract_features(html_content):
-    try:
-        soup = BeautifulSoup(html_content, 'html.parser')
-        title = soup.title.string if soup.title else None
-        if title:
-            title = ' '.join(title.split()).strip()
-        num_links = len(soup.find_all('a'))
-        num_images = len(soup.find_all('img'))
-        return {
-            'html_title': title,
-            'num_links': num_links,
-            'num_images': num_images
-        }
-    except Exception as e:
-        return default_values
+def parse_html_and_extract_features(html_content, url):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    parsed_url = urlparse(url)
+    features = {}
+    base_domain = parsed_url.netloc
+
+    script_files = soup.find_all('script', src=True)
+    css_files = soup.find_all('link', rel='stylesheet')
+    img_files = soup.find_all('img', src=True)
+    anchor_files = soup.find_all('a', href=True)
+
+    total_hyperlinks = len(soup.find_all(['a', 'link', 'script', 'img']))
+    
+    features['script_files_ratio'] = len(script_files) / total_hyperlinks if total_hyperlinks > 0 else 0
+    features['css_files_ratio'] = len(css_files) / total_hyperlinks if total_hyperlinks > 0 else 0
+    features['image_files_ratio'] = len(img_files) / total_hyperlinks if total_hyperlinks > 0 else 0
+    features['anchor_files_ratio'] = len(anchor_files) / total_hyperlinks if total_hyperlinks > 0 else 0
+    
+
+    all_tags = soup.find_all(['a', 'script', 'link', 'img'])
+    total_hyperlinks = len(all_tags)
+    empty_anchor_count = 0
+    null_hyperlink_count = 0
+
+    for tag in all_tags:
+        # For anchor tags, use 'href'
+        if tag.name == 'a':
+            href = tag.get('href')
+            if href is None:
+                empty_anchor_count += 1
+            if href is None or href in ['', '#', '#content', 'javascript:void(0);']:
+                null_hyperlink_count += 1
+        # For other tags, use 'src' or 'href'
+        else:
+            src_or_href = tag.get('src') or tag.get('href')
+            if src_or_href is None or src_or_href in ['', '#', '#content', 'javascript:void(0);']:
+                null_hyperlink_count += 1
+
+    # Feature 7: Empty Anchor Ratio
+    features['empty_anchor_ratio'] = empty_anchor_count / total_hyperlinks if total_hyperlinks > 0 else 0
+
+    # Feature 8: Null Hyperlink Ratio
+    features['null_hyperlink_ratio'] = null_hyperlink_count / total_hyperlinks if total_hyperlinks > 0 else 0
+
+    # Feature F9: Total hyperlinks
+    features['total_hyperlinks'] = total_hyperlinks
+    
+
+    all_tags = soup.find_all(['a', 'script', 'link', 'img', 'form'])
+    total_hyperlinks = len(all_tags)
+    internal_hyperlinks = 0
+    external_hyperlinks = 0
+
+    for tag in all_tags:
+        # Extract href or src based on tag type
+        url = tag.get('href') or tag.get('src') or tag.get('action')
+        if url:
+            parsed_url = urlparse(url)
+            if parsed_url.netloc == "" or base_domain in parsed_url.netloc:
+                internal_hyperlinks += 1
+            else:
+                external_hyperlinks += 1
+
+    # Feature 10: Internal Hyperlink Ratio
+    features['internal_hyperlink_ratio'] = internal_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0
+
+    # Feature 11: External Hyperlink Ratio
+    features['external_hyperlink_ratio'] = external_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0
+
+    # Feature 12: External to Internal Ratio
+    features['external_to_internal_ratio'] = external_hyperlinks / internal_hyperlinks if internal_hyperlinks > 0 else 0
+
+
+    forms = soup.find_all('form')
+    total_forms = len(forms)
+    suspicious_forms = 0
+    for form in forms:
+        action_url = form.get('action')
+        if action_url is None or action_url.strip() == "":
+            # Action is null or empty
+            suspicious_forms += 1
+        else:
+            parsed_action_url = urlparse(action_url)
+            if not parsed_action_url.netloc or base_domain not in parsed_action_url.netloc:
+                # Action is external or invalid
+                suspicious_forms += 1
+    # Feature F14: Total forms
+    features['total_forms'] = total_forms
+    # Feature F15: Suspicious form ratio
+    features['suspicious_form_ratio'] = suspicious_forms / total_forms if total_forms > 0 else 0
+    
+
+    return features
+
+
+
+
+
+
+html_example = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <img src="image.png" alt="Example Image">
+    <a href="http://example.com/page1">Link 1</a>
+    <a href="#content">Null Link</a>
+    <a href="javascript:void(0);">JavaScript Link</a>
+    <form action="http://example.com/login">
+        <input type="text" name="username">
+        <input type="password" name="password">
+    </form>
+    <form action="http://malicious.com/submit">
+        <input type="text" name="user">
+    </form>
+</body>
+</html>
+"""
+
+# Call the function
+features = parse_html_and_extract_features(html_example, 'http://malicious.com')
+
+# Print the extracted features
+print(len(features))
