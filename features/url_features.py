@@ -162,6 +162,6 @@ def features_from_associative_classification_paper(url):
     return features
 
 # Example usage
-url = "http://example.com.ca.hello.au.fr.com/path/to/resource/index.php?query=reza@gmail.c&gewfwe"
-print(len(extract_url_features(url)))
-print(extract_url_features(url)['domain_in_subdomains'])
+# url = "http://example.com.ca.hello.au.fr.com/path/to/resource/index.php?query=reza@gmail.c&gewfwe"
+# print(len(extract_url_features(url)))
+# print(extract_url_features(url)['domain_in_subdomains'])

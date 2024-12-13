@@ -27,7 +27,7 @@ for index, row in df.iterrows():
     c+=1
     # print(c)
     if c==1000:
-        break
+        print(c)
     # Extract features from the URL
     url_features = extract_url_features(row['url'])
 

@@ -147,7 +147,7 @@ def extract_url_features(soup, base_url):
 
     # Check for external favicon
     favicon = soup.find('link', rel='icon')
-    favicon_external = favicon and base_domain not in urlparse(favicon['href']).netloc
+    favicon_external = favicon and 'href' in favicon and base_domain not in urlparse(favicon['href']).netloc
 
     return {
         'PctExtHyperlinks': external_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0,
@@ -331,7 +331,7 @@ html_example = """
 """
 
 # Call the function
-features = parse_html_and_extract_features(html_example, 'http://malicious.com')
+# features = parse_html_and_extract_features(html_example, 'http://malicious.com')
 
 # Print the extracted features
-print(len(features))
+# print(len(features))
