@@ -4,7 +4,6 @@ from features.url_features import extract_url_features
 from features.html_features import extract_website_features
 
 input_csv = 'dataset/dm.csv' 
-output_csv = 'features/features.csv'
 
 # Read the input CSV file
 df = pd.read_csv(input_csv)
@@ -19,15 +18,14 @@ def process_created_date(created_date):
         return {'year': None, 'month': None, 'day': None, 'hour': None, 'minute': None}
 
 # Create an empty list to hold processed rows
-processed_data = []
+url_data = []
+html_data = []
 
-c=0
-# Iterate over each row in the dataframe
-for index, row in df.iterrows():
-    c+=1
+start_index, end_index = 30000,80000
+for index, row in df[start_index:end_index].iterrows():
     # print(c)
-    if c==1000:
-        print(c)
+    if index%1000==0:
+        print(index)
     # Extract features from the URL
     url_features = extract_url_features(row['url'])
 
@@ -35,23 +33,26 @@ for index, row in df.iterrows():
     website_features = extract_website_features(row['website'], row['url'])
 
     # Process the created_date column
-    date_features = process_created_date(row['created_date'])
+    # date_features = process_created_date(row['created_date'])
 
-    # Combine all features with the rec_id
-    processed_row = {
+    processed_url_row = {
         'rec_id': row['rec_id'],
         **url_features,
+        'phishing': row['result']
+    }
+    processed_html_row = {
+        'rec_id': row['rec_id'],
         **website_features,
-        **date_features
+        'phishing': row['result']
     }
 
     # Add the processed row to the list
-    processed_data.append(processed_row)
+    url_data.append(processed_url_row)
+    html_data.append(processed_html_row)
 
 # Convert the processed data into a DataFrame
-processed_df = pd.DataFrame(processed_data)
+url_df = pd.DataFrame(url_data)
+html_df = pd.DataFrame(html_data)
 
-# Save the processed data into a new CSV file
-processed_df.to_csv(output_csv, index=False)
-
-print(f"Processed data has been saved to {output_csv}")
+url_df.to_csv(f'features/url_features_{start_index}_{end_index}.csv', index=False)
+html_df.to_csv(f'features/html_features_{start_index}_{end_index}.csv', index=False)

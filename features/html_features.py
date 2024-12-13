@@ -91,11 +91,14 @@ def extract_internal_external_features(soup, base_domain):
     for tag in all_tags:
         url = tag.get('href') or tag.get('src') or tag.get('action')
         if url:
-            parsed_url = urlparse(url)
-            if parsed_url.netloc == "" or base_domain in parsed_url.netloc:
-                internal_hyperlinks += 1
-            else:
-                external_hyperlinks += 1
+            try:
+                parsed_url = urlparse(url)
+                if parsed_url.netloc == "" or base_domain in parsed_url.netloc:
+                    internal_hyperlinks += 1
+                else:
+                    external_hyperlinks += 1
+            except:
+                pass
 
     return {
         'internal_hyperlink_ratio': internal_hyperlinks / total_hyperlinks if total_hyperlinks > 0 else 0,
@@ -132,8 +135,11 @@ def extract_url_features(soup, base_url):
 
     for tag in anchor_tags:
         href = tag.get('href')
-        if href and base_domain not in urlparse(href).netloc:
-            external_hyperlinks += 1
+        try:
+            if href and base_domain not in urlparse(href).netloc:
+                external_hyperlinks += 1
+        except:
+            pass
 
     # Extract resource tags (scripts, images, stylesheets)
     resource_tags = soup.find_all(['script', 'img', 'link'], src=True)
@@ -141,9 +147,12 @@ def extract_url_features(soup, base_url):
     external_resources = 0
 
     for tag in resource_tags:
-        src_or_href = tag.get('src') or tag.get('href')
-        if src_or_href and base_domain not in urlparse(src_or_href).netloc:
-            external_resources += 1
+        try:
+            src_or_href = tag.get('src') or tag.get('href')
+            if src_or_href and base_domain not in urlparse(src_or_href).netloc:
+                external_resources += 1
+        except:
+            pass
 
     # Check for external favicon
     favicon = soup.find('link', rel='icon')
@@ -206,9 +215,12 @@ def extract_hyperlink_and_redirection_features(soup, base_url):
         for tag in soup.find_all('a', href=True):
             href = tag.get('href')
             if href:
-                parsed_url = urlparse(href)
-                if parsed_url.netloc:
-                    all_domains.append(parsed_url.netloc)
+                try:
+                    parsed_url = urlparse(href)
+                    if parsed_url.netloc:
+                        all_domains.append(parsed_url.netloc)
+                except:
+                    pass
 
         # Count occurrences of each domain
         domain_counts = Counter(all_domains)
