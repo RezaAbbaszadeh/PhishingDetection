@@ -1,0 +1,5 @@
+,Itemset,Antecedent Support,Union Support,Confidence,Lift
+0,"frozenset({'qty_-_directory_0.0_2.0', 'prefix_suffix_in_domain_1'})",0.1431125,0.1168,0.8161411476984889,2.176376393862637
+1,"frozenset({'prefix_suffix_in_domain_1', 'qty_-_directory_0.0_2.0', 'qty_-_file_0.0_10.0'})",0.1431125,0.1168,0.8161411476984889,2.176376393862637
+2,"frozenset({'params_length_0.0_157.0', 'qty_-_directory_0.0_2.0', 'prefix_suffix_in_domain_1'})",0.1406125,0.1143375,0.8131389456840608,2.168370521824162
+3,"frozenset({'params_length_0.0_157.0', 'prefix_suffix_in_domain_1', 'qty_-_directory_0.0_2.0', 'qty_-_file_0.0_10.0'})",0.1406125,0.1143375,0.8131389456840608,2.168370521824162

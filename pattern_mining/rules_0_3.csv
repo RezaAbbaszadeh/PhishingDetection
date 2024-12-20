@@ -1,0 +1,280 @@
+,Itemset,Antecedent Support,Union Support,Confidence,Lift
+0,frozenset({'external_hyperlink_ratio_0.05_0.17'}),0.251075,0.2093,0.8336154535497362,1.3337847256795778
+1,frozenset({'css_files_ratio_0.0_0.03'}),0.2498125,0.2241625,0.8973229922441831,1.4357167875906929
+2,frozenset({'total_hyperlinks_71.0_186.0'}),0.2508125,0.2230125,0.8891602292549216,1.4226563668078744
+3,frozenset({'total_hyperlinks_186.0_3151.01'}),0.25185,0.23405,0.9293230097280126,1.4869168155648202
+4,frozenset({'PctExtHyperlinks_0.21_0.92'}),0.2500375,0.2280125,0.9119132130180473,1.4590611408288756
+5,frozenset({'internal_hyperlink_ratio_0.62_0.8'}),0.250075,0.202725,0.8106568029591122,1.2970508847345796
+6,frozenset({'qty_-_directory_2.0_18.0'}),0.2559375,0.2363125,0.9233211233211234,1.4773137973137973
+7,"frozenset({'qty_-_domain_0.0_3.0', 'suspicious_form_ratio_0.5_1.0', 'qty_._url_2.0_3.0', 'qty_._directory_0.0_1.0'})",0.2338625,0.187525,0.801860067347266,1.2829761077556256
+8,"frozenset({'qty_-_domain_0.0_3.0', 'external_hyperlink_ratio_0.05_0.17'})",0.24955,0.2090375,0.8376577840112202,1.3402524544179522
+9,"frozenset({'qty_-_file_0.0_10.0', 'external_hyperlink_ratio_0.05_0.17'})",0.2491,0.207325,0.8322962665596146,1.3316740264953835
+10,"frozenset({'num_sensitive_words_0', 'external_hyperlink_ratio_0.05_0.17'})",0.22115,0.1918375,0.8674542165950712,1.387926746552114
+11,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'external_hyperlink_ratio_0.05_0.17'})",0.247575,0.2070625,0.8363627183681713,1.338180349389074
+12,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'external_hyperlink_ratio_0.05_0.17'})",0.220175,0.1915875,0.8701600999205177,1.3922561598728282
+13,"frozenset({'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'external_hyperlink_ratio_0.05_0.17'})",0.2193125,0.19,0.8663436876603021,1.3861499002564834
+14,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'external_hyperlink_ratio_0.05_0.17'})",0.2183375,0.18975,0.869067384210225,1.39050781473636
+15,"frozenset({'qty_-_domain_0.0_3.0', 'css_files_ratio_0.0_0.03'})",0.24775,0.2236375,0.9026740665993945,1.4442785065590313
+16,"frozenset({'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0'})",0.2449875,0.2193375,0.8953007806520741,1.4324812490433185
+17,"frozenset({'num_sensitive_words_0', 'css_files_ratio_0.0_0.03'})",0.23275,0.2119,0.9104189044038667,1.4566702470461868
+18,"frozenset({'css_files_ratio_0.0_0.03', 'qty_tld_url_3.0_8.0'})",0.2165125,0.1977375,0.9132844523988223,1.4612551238381157
+19,"frozenset({'css_files_ratio_0.0_0.03', 'PctExtResourceUrls_0.49_1.0'})",0.2140625,0.1896375,0.8858978102189781,1.417436496350365
+20,"frozenset({'qty_-_domain_0.0_3.0', 'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0'})",0.24295,0.2188375,0.900751183371064,1.4412018933937023
+21,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'css_files_ratio_0.0_0.03'})",0.2307875,0.2113875,0.9159399880842767,1.4655039809348427
+22,"frozenset({'num_sensitive_words_0', 'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0'})",0.2282875,0.2074375,0.9086677982806768,1.4538684772490829
+23,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0'})",0.22635,0.20695,0.9142920256240336,1.4628672409984538
+24,"frozenset({'qty_-_domain_0.0_3.0', 'css_files_ratio_0.0_0.03', 'qty_tld_url_3.0_8.0'})",0.2146125,0.197225,0.9189818859572485,1.4703710175315976
+25,"frozenset({'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.2123125,0.1935375,0.911569031498381,1.4585104503974096
+26,"frozenset({'num_sensitive_words_0', 'css_files_ratio_0.0_0.03', 'qty_tld_url_3.0_8.0'})",0.203025,0.188075,0.9263637483068586,1.4821819972909738
+27,"frozenset({'qty_-_domain_0.0_3.0', 'css_files_ratio_0.0_0.03', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.2104375,0.19305,0.9173745173745174,1.4677992277992278
+28,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'css_files_ratio_0.0_0.03', 'qty_tld_url_3.0_8.0'})",0.2012125,0.187575,0.9322233956637883,1.4915574330620613
+29,"frozenset({'qty_-_domain_0.0_3.0', 'css_files_ratio_0.0_0.03', 'PctExtResourceUrls_0.49_1.0'})",0.2121625,0.1892625,0.8920638661403405,1.4273021858245447
+30,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_71.0_186.0'})",0.24865,0.2225875,0.8951839935652524,1.4322943897044038
+31,"frozenset({'total_hyperlinks_71.0_186.0', 'qty_-_file_0.0_10.0'})",0.2471,0.2193125,0.8875455281262646,1.4200728450020235
+32,"frozenset({'num_sensitive_words_0', 'total_hyperlinks_71.0_186.0'})",0.225325,0.20315,0.9015865971374681,1.442538555419949
+33,"frozenset({'total_hyperlinks_71.0_186.0', 'qty_tld_url_3.0_8.0'})",0.2136125,0.1940375,0.9083621042776054,1.4533793668441688
+34,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_71.0_186.0', 'qty_-_file_0.0_10.0'})",0.2449375,0.2188875,0.8936463383516203,1.4298341413625926
+35,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'total_hyperlinks_71.0_186.0'})",0.2235375,0.2027625,0.907062573393726,1.4513001174299616
+36,"frozenset({'total_hyperlinks_71.0_186.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0'})",0.22205,0.1998875,0.9001913983337086,1.440306237333934
+37,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_71.0_186.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0'})",0.2202625,0.1995,0.9057374723341468,1.449179955734635
+38,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_71.0_186.0', 'qty_tld_url_3.0_8.0'})",0.21175,0.1936375,0.9144628099173554,1.4631404958677687
+39,"frozenset({'total_hyperlinks_71.0_186.0', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.21035,0.1907875,0.9070002376990729,1.4512003803185167
+40,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_71.0_186.0', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.2084875,0.1903875,0.9131842436596918,1.461094789855507
+41,"frozenset({'qty_/_url_4.0_5.0', 'qty_tld_url_3.0_8.0'})",0.2350125,0.1881625,0.8006489016541674,1.2810382426466678
+42,"frozenset({'qty_-_domain_0.0_3.0', 'qty_/_url_4.0_5.0', 'num_sensitive_words_0'})",0.237175,0.190325,0.8024665331506272,1.2839464530410036
+43,"frozenset({'qty_-_domain_0.0_3.0', 'qty_/_url_4.0_5.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0'})",0.23455,0.1877625,0.8005222767000639,1.2808356427201022
+44,"frozenset({'qty_-_domain_0.0_3.0', 'qty_/_url_4.0_5.0', 'qty_tld_url_3.0_8.0'})",0.232575,0.18805,0.8085563796624744,1.293690207459959
+45,"frozenset({'qty_-_domain_0.0_3.0', 'script_files_ratio_0.01_0.05'})",0.24695,0.198325,0.8030977930755213,1.2849564689208341
+46,"frozenset({'qty_-_domain_0.0_3.0', 'script_files_ratio_0.01_0.05', 'qty_-_file_0.0_10.0'})",0.24355,0.194925,0.8003490043112297,1.2805584068979674
+47,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_186.0_3151.01'})",0.2511125,0.233775,0.9309572402807507,1.489531584449201
+48,"frozenset({'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.2469,0.2291,0.9279060348319157,1.484649655731065
+49,"frozenset({'num_sensitive_words_0', 'total_hyperlinks_186.0_3151.01'})",0.2371875,0.222775,0.9392358366271409,1.5027773386034255
+50,"frozenset({'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.220475,0.207125,0.9394489171107835,1.5031182673772536
+51,"frozenset({'qty_._directory_0.0_1.0', 'total_hyperlinks_186.0_3151.01'})",0.20735,0.1955875,0.9432722449963828,1.5092355919942126
+52,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.2461875,0.22885,0.9295760345265296,1.4873216552424473
+53,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'total_hyperlinks_186.0_3151.01'})",0.2364625,0.2225,0.940952582333351,1.5055241317333616
+54,"frozenset({'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.232575,0.2181625,0.9380307427711491,1.5008491884338384
+55,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.231875,0.2179125,0.9397843665768194,1.503654986522911
+56,"frozenset({'qty_-_domain_0.0_3.0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.2199375,0.2068625,0.9405512929809605,1.5048820687695368
+57,"frozenset({'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.216275,0.202925,0.9382730320194197,1.5012368512310714
+58,"frozenset({'num_sensitive_words_0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.2088625,0.198375,0.9497875396492907,1.5196600634388653
+59,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.2157625,0.2026875,0.9394009617055791,1.5030415387289264
+60,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.2083375,0.1981125,0.9509209815803683,1.5214735705285893
+61,"frozenset({'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01', 'qty_tld_url_3.0_8.0'})",0.2049125,0.194425,0.9488196181296894,1.518111389007503
+62,"frozenset({'num_sensitive_words_0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.2044125,0.1941875,0.9499785971992907,1.519965755518865
+63,"frozenset({'qty_-_domain_0.0_3.0', 'qty_._directory_0.0_1.0', 'total_hyperlinks_186.0_3151.01'})",0.2069875,0.1954125,0.9440787487167099,1.5105259979467358
+64,"frozenset({'qty_._directory_0.0_1.0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.20385,0.1920875,0.9422982585234241,1.5076772136374785
+65,"frozenset({'qty_-_domain_0.0_3.0', 'qty_._directory_0.0_1.0', 'qty_-_file_0.0_10.0', 'total_hyperlinks_186.0_3151.01'})",0.2034875,0.1919125,0.9431168990724247,1.5089870385158795
+66,"frozenset({'qty_-_domain_0.0_3.0', 'PctExtHyperlinks_0.21_0.92'})",0.2487625,0.2276375,0.9150796442389829,1.4641274307823726
+67,"frozenset({'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92'})",0.2457125,0.2236875,0.9103627206593071,1.4565803530548913
+68,"frozenset({'num_sensitive_words_0', 'PctExtHyperlinks_0.21_0.92'})",0.2250125,0.2085125,0.9266707405144158,1.4826731848230652
+69,"frozenset({'PctExtHyperlinks_0.21_0.92', 'qty_tld_url_3.0_8.0'})",0.21785,0.20165,0.9256369061280698,1.4810190498049116
+70,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92'})",0.24445,0.223325,0.9135815095111475,1.4617304152178359
+71,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'PctExtHyperlinks_0.21_0.92'})",0.2239625,0.2081625,0.9294524753027851,1.4871239604844562
+72,"frozenset({'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92'})",0.221025,0.204525,0.9253478113335596,1.4805564981336954
+73,"frozenset({'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92'})",0.2199875,0.2041875,0.9281777373714415,1.4850843797943063
+74,"frozenset({'qty_-_domain_0.0_3.0', 'PctExtHyperlinks_0.21_0.92', 'qty_tld_url_3.0_8.0'})",0.2167375,0.2012875,0.9287156122037027,1.4859449795259243
+75,"frozenset({'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92', 'qty_tld_url_3.0_8.0'})",0.214075,0.197875,0.9243255868270466,1.4789209389232745
+76,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'PctExtHyperlinks_0.21_0.92', 'qty_tld_url_3.0_8.0'})",0.212975,0.197525,0.9274562742105882,1.4839300387369412
+77,"frozenset({'qty_-_domain_0.0_3.0', 'internal_hyperlink_ratio_0.62_0.8'})",0.2484625,0.2024625,0.8148613975952105,1.3037782361523367
+78,"frozenset({'qty_-_file_0.0_10.0', 'internal_hyperlink_ratio_0.62_0.8'})",0.2473125,0.200075,0.8089967146828406,1.294394743492545
+79,"frozenset({'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'internal_hyperlink_ratio_0.62_0.8'})",0.2457,0.1998125,0.8132376882376883,1.3011803011803011
+80,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0'})",0.25515,0.2359125,0.9246031746031746,1.4793650793650794
+81,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_file_0.0_10.0'})",0.24485,0.225475,0.9208699203594037,1.473391872575046
+82,"frozenset({'qty_-_directory_2.0_18.0', 'num_sensitive_words_0'})",0.2314375,0.2187,0.944963543073184,1.5119416689170944
+83,"frozenset({'qty_-_directory_2.0_18.0', 'qty_tld_url_3.0_8.0'})",0.2213375,0.2074625,0.937312927090981,1.4997006833455697
+84,"frozenset({'qty_-_directory_2.0_18.0', 'qty_._directory_0.0_1.0'})",0.1951125,0.1878,0.9625216221410725,1.540034595425716
+85,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.244125,0.225125,0.9221710189452125,1.47547363031234
+86,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'num_sensitive_words_0'})",0.2309125,0.218325,0.9454880095274184,1.5127808152438695
+87,"frozenset({'qty_-_directory_2.0_18.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0'})",0.2214,0.2089,0.9435411020776874,1.5096657633242998
+88,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'qty_-_file_0.0_10.0'})",0.2209125,0.2085625,0.9440955129293273,1.5105528206869236
+89,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'qty_tld_url_3.0_8.0'})",0.2207375,0.207075,0.9381052154708648,1.5009683447533837
+90,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.2117125,0.198075,0.9355848143118616,1.4969357028989785
+91,"frozenset({'qty_-_directory_2.0_18.0', 'num_sensitive_words_0', 'qty_tld_url_3.0_8.0'})",0.201525,0.192775,0.9565810693462349,1.5305297109539757
+92,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0', 'qty_tld_url_3.0_8.0'})",0.211175,0.1977375,0.9363679412809282,1.498188706049485
+93,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'num_sensitive_words_0', 'qty_tld_url_3.0_8.0'})",0.2010375,0.1924125,0.9570975564260398,1.5313560902816636
+94,"frozenset({'qty_-_directory_2.0_18.0', 'qty_-_domain_0.0_3.0', 'qty_._directory_0.0_1.0'})",0.194825,0.187675,0.9633003977928911,1.5412806364686258
+95,"frozenset({'qty_-_domain_0.0_3.0', 'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0'})",0.3964375,0.32005,0.8073151505596721,1.2917042408954753
+96,"frozenset({'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.3908,0.3145,0.8047594677584443,1.287615148413511
+97,"frozenset({'qty_._directory_0.0_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0'})",0.390025,0.318025,0.8153964489455804,1.3046343183129285
+98,"frozenset({'qty_-_domain_0.0_3.0', 'qty_._directory_0.0_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0'})",0.38575,0.3176875,0.823558003888529,1.3176928062216464
+99,"frozenset({'qty_._directory_0.0_1.0', 'qty_-_file_0.0_10.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0'})",0.3842125,0.3123,0.8128314409343788,1.300530305495006
+100,"frozenset({'qty_._directory_0.0_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.3799375,0.3119625,0.821088994900477,1.3137423918407634
+101,"frozenset({'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0'})",0.359725,0.296225,0.8234762665925359,1.3175620265480574
+102,"frozenset({'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0'})",0.35615,0.2959125,0.8308648041555524,1.329383686648884
+103,"frozenset({'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_file_0.0_10.0'})",0.3545125,0.2911,0.8211276048094215,1.3138041676950745
+104,"frozenset({'qty_._directory_0.0_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.3509375,0.2907875,0.8286019590382901,1.3257631344612641
+105,"frozenset({'qty_._directory_0.0_1.0', 'qty_._url_2.0_3.0', 'PctExtResourceUrls_0.49_1.0', 'qty_tld_url_3.0_8.0'})",0.2986625,0.24245,0.8117858787092453,1.2988574059347926
+106,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0'})",0.29515,0.242175,0.8205149923767575,1.312823987802812
+107,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_file_0.0_10.0'})",0.2933375,0.2372125,0.8086674905186007,1.293867984829761
+108,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.289825,0.2369375,0.817519192616234,1.3080307081859743
+109,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_-_domain_0.0_3.0'})",0.3003875,0.24175,0.8047938079980026,1.2876700927968041
+110,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.295275,0.236725,0.8017102700872067,1.2827364321395307
+111,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0'})",0.2738875,0.225325,0.8226917986399525,1.316306877823924
+112,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0'})",0.271,0.225075,0.8305350553505534,1.3288560885608853
+113,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_file_0.0_10.0'})",0.269125,0.22065,0.8198792382721783,1.3118067812354854
+114,"frozenset({'qty_._directory_0.0_1.0', 'PctExtResourceUrls_0.49_1.0', 'num_sensitive_words_0', 'qty_._url_2.0_3.0', 'qty_tld_url_3.0_8.0', 'qty_-_domain_0.0_3.0', 'qty_-_file_0.0_10.0'})",0.2662375,0.2204,0.8278322925958965,1.3245316681534345
+115,frozenset({'external_to_internal_ratio_0.05_0.24'}),0.2498375,0.2078625,0.8319907940161105,1.331185270425777
+116,frozenset({'anchor_files_ratio_0.69_1.0'}),0.25,0.2083,0.8332,1.33312
+117,frozenset({'image_files_ratio_0.01_0.06'}),0.2499375,0.2042125,0.8170542635658914,1.3072868217054263
+118,frozenset({'file_length_13.0_148.0'}),0.2606625,0.2225625,0.8538339807221982,1.366134369155517
+119,frozenset({'IframeOrFrame_1'}),0.252775,0.2077125,0.8217288102067054,1.3147660963307286
+120,frozenset({'external_to_internal_ratio_0.24_0.8'}),0.24805,0.1995625,0.804525297319089,1.2872404757105422
+121,frozenset({'PctNullSelfRedirectHyperlinks_0.02_0.11'}),0.2452875,0.2115125,0.8623044386689089,1.3796871018702543
+122,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.493275,0.417225,0.8458263646039228,1.3533221833662765
+123,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.4889,0.416,0.8508897525056248,1.3614236040089998
+124,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.4879625,0.4137875,0.8479903681123037,1.356784588979686
+125,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.48575,0.413375,0.8510036026762737,1.361605764282038
+126,"frozenset({'no_https_0', 'SubmitInfoToEmail_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.411575,0.336975,0.8187450646905181,1.309992103504829
+127,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'SubmitInfoToEmail_0'})",0.407325,0.33585,0.8245258700055238,1.3192413920088382
+128,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0', 'SubmitInfoToEmail_0'})",0.40645,0.333725,0.8210727026694551,1.313716324271128
+129,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'SubmitInfoToEmail_0'})",0.4043375,0.3333875,0.8245277769190342,1.3192444430704549
+130,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.49535,0.403075,0.8137175734329263,1.3019481174926821
+131,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'params_length_0.0_157.0', 'prefix_suffix_in_domain_0'})",0.495325,0.40305,0.8137081714026144,1.301933074244183
+132,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.49495,0.402725,0.8136680472775027,1.3018688756440044
+133,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.494925,0.4027,0.8136586351467394,1.301853816234783
+134,"frozenset({'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.4438,0.3628875,0.8176825146462371,1.3082920234339794
+135,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0'})",0.4233375,0.3407625,0.8049428647355834,1.2879085835769335
+136,"frozenset({'params_length_0.0_157.0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.443775,0.3628625,0.8176722438172497,1.3082755901075995
+137,"frozenset({'num_numeric_chars_0.0_4.0', 'qty_params_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.443325,0.3625,0.8176845429425365,1.3082952687080582
+138,"frozenset({'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.4433,0.362475,0.8176742612226483,1.3082788179562372
+139,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'params_length_0.0_157.0', 'qty_._domain_2.0_6.0'})",0.4233125,0.3407375,0.8049313450465083,1.2878901520744133
+140,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_params_0.0_4.0', 'qty_._domain_2.0_6.0'})",0.42295,0.3404125,0.8048528194822083,1.2877645111715332
+141,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.3713125,0.32185,0.8667901026763172,1.3868641642821076
+142,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.422925,0.3403875,0.8048412839155878,1.2877460542649406
+143,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0'})",0.3712875,0.321825,0.8667811332188669,1.386849813150187
+144,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0'})",0.3709375,0.3215125,0.8667565290648694,1.3868104465037911
+145,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.3709125,0.3214875,0.8667475482762107,1.3867960772419372
+146,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'SubmitInfoToEmail_0'})",0.311925,0.263375,0.8443536106435843,1.3509657770297347
+147,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'SubmitInfoToEmail_0'})",0.311925,0.263375,0.8443536106435843,1.3509657770297347
+148,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0', 'SubmitInfoToEmail_0'})",0.31155,0.2630375,0.8442866313593324,1.3508586101749318
+149,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'SubmitInfoToEmail_0'})",0.31155,0.2630375,0.8442866313593324,1.3508586101749318
+150,"frozenset({'no_https_0', 'empty_anchor_ratio_0.0_0.01', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.3409875,0.2761375,0.8098170754059899,1.295707320649584
+151,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'params_length_0.0_157.0'})",0.3370125,0.2751125,0.8163272875635177,1.3061236601016284
+152,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'qty_params_0.0_4.0'})",0.336075,0.273025,0.8123930670237298,1.2998289072379676
+153,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.3341375,0.2727375,0.8162433130073699,1.3059893008117918
+154,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01'})",0.2594875,0.21775,0.8391541018353486,1.3426465629365576
+155,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'params_length_0.0_157.0'})",0.2594625,0.217725,0.8391386038444862,1.342621766151178
+156,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'qty_params_0.0_4.0'})",0.2591875,0.2174875,0.8391126115264046,1.3425801784422473
+157,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'empty_anchor_ratio_0.0_0.01', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.2591625,0.2174625,0.8390970915931124,1.34255534654898
+158,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'IframeOrFrame_0'})",0.325875,0.2617125,0.8031070195627158,1.2849712313003452
+159,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'IframeOrFrame_0'})",0.3228875,0.25925,0.8029112306918044,1.284657969106887
+160,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'IframeOrFrame_0'})",0.245175,0.20115,0.8204343836035485,1.3126950137656777
+161,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'IframeOrFrame_0'})",0.24515,0.201125,0.8204160717927799,1.3126657148684477
+162,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0', 'IframeOrFrame_0'})",0.24485,0.2008625,0.8203491933837043,1.3125587094139268
+163,"frozenset({'no_https_0', 'num_numeric_chars_0.0_4.0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'IframeOrFrame_0'})",0.244825,0.2008375,0.8203308485653018,1.312529357704483
+164,"frozenset({'no_https_0', 'PctNullSelfRedirectHyperlinks_0.0_0.02', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0'})",0.2435625,0.201625,0.827816268924814,1.3245060302797023
+165,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.0_0.02'})",0.2410875,0.200825,0.8329963187639342,1.3327941100222946
+166,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'PctNullSelfRedirectHyperlinks_0.0_0.02', 'qty_params_0.0_4.0'})",0.239925,0.1992625,0.8305199541523394,1.328831926643743
+167,"frozenset({'no_https_0', 'qty_._domain_2.0_6.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.0_0.02', 'qty_params_0.0_4.0'})",0.2390375,0.199075,0.8328191183391727,1.3325105893426763
+168,"frozenset({'total_forms_2.0_37.0', 'prefix_suffix_in_domain_0'})",0.2446,0.20005,0.8178659035159443,1.308585445625511
+169,"frozenset({'no_https_0', 'total_forms_2.0_37.0'})",0.23665,0.2,0.8451299387280795,1.3522079019649271
+170,"frozenset({'total_forms_2.0_37.0', 'params_length_0.0_157.0', 'prefix_suffix_in_domain_0'})",0.24235,0.1997375,0.824169589436765,1.318671343098824
+171,"frozenset({'total_forms_2.0_37.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2429375,0.1990625,0.8193979933110368,1.3110367892976589
+172,"frozenset({'total_forms_2.0_37.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2412875,0.1989375,0.8244832409470031,1.319173185515205
+173,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'params_length_0.0_157.0'})",0.2346625,0.1996875,0.8509561604431897,1.3615298567091034
+174,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'qty_params_0.0_4.0'})",0.2346,0.19905,0.84846547314578,1.357544757033248
+175,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'prefix_suffix_in_domain_0'})",0.212575,0.18895,0.8888627543220041,1.4221804069152066
+176,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.2338125,0.198925,0.8507885592087676,1.3612616947340281
+177,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'params_length_0.0_157.0', 'prefix_suffix_in_domain_0'})",0.211275,0.1886375,0.8928529168145782,1.4285646669033252
+178,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2112125,0.188025,0.8902171983192283,1.4243475173107654
+179,"frozenset({'no_https_0', 'total_forms_2.0_37.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.2104875,0.1879,0.8926895896430905,1.428303343428945
+180,"frozenset({'params_length_0.0_157.0', 'external_to_internal_ratio_0.05_0.24'})",0.245975,0.2077125,0.8444455737371684,1.3511129179794694
+181,"frozenset({'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24'})",0.2487125,0.2074125,0.833944815801377,1.3343117052822033
+182,"frozenset({'external_to_internal_ratio_0.05_0.24', 'prefix_suffix_in_domain_0'})",0.225625,0.1941375,0.8604432132963988,1.376709141274238
+183,"frozenset({'no_https_0', 'external_to_internal_ratio_0.05_0.24'})",0.21515,0.190075,0.8834534046014408,1.4135254473623053
+184,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24'})",0.2452875,0.207325,0.8452326351730113,1.3523722162768181
+185,"frozenset({'params_length_0.0_157.0', 'external_to_internal_ratio_0.05_0.24', 'prefix_suffix_in_domain_0'})",0.222525,0.1939875,0.8717559824738794,1.394809571958207
+186,"frozenset({'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24', 'prefix_suffix_in_domain_0'})",0.2246125,0.1936875,0.8623184373086984,1.3797094996939174
+187,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24', 'prefix_suffix_in_domain_0'})",0.221875,0.1936,0.8725633802816901,1.3961014084507042
+188,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'external_to_internal_ratio_0.05_0.24'})",0.2134125,0.1899375,0.8900017571604287,1.424002811456686
+189,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24'})",0.21445,0.1897,0.8845884821636746,1.4153415714618793
+190,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.05_0.24'})",0.2130125,0.1896125,0.890147291825597,1.4242356669209553
+191,"frozenset({'params_length_0.0_157.0', 'qty_/_directory_2.0_3.0', 'prefix_suffix_in_domain_0'})",0.24615,0.1992,0.8092626447288238,1.2948202315661181
+192,"frozenset({'qty_/_directory_2.0_3.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.247075,0.19875,0.8044116159061014,1.2870585854497623
+193,"frozenset({'params_length_0.0_157.0', 'qty_/_directory_2.0_3.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.244925,0.198675,0.8111666836786771,1.2978666938858834
+194,"frozenset({'params_length_0.0_157.0', 'path_level_1.0_2.0', 'prefix_suffix_in_domain_0'})",0.24615,0.1992,0.8092626447288238,1.2948202315661181
+195,"frozenset({'qty_params_0.0_4.0', 'path_level_1.0_2.0', 'prefix_suffix_in_domain_0'})",0.247075,0.19875,0.8044116159061014,1.2870585854497623
+196,"frozenset({'params_length_0.0_157.0', 'qty_/_directory_2.0_3.0', 'path_level_1.0_2.0', 'prefix_suffix_in_domain_0'})",0.24615,0.1992,0.8092626447288238,1.2948202315661181
+197,"frozenset({'qty_/_directory_2.0_3.0', 'path_level_1.0_2.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.247075,0.19875,0.8044116159061014,1.2870585854497623
+198,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'path_level_1.0_2.0', 'prefix_suffix_in_domain_0'})",0.244925,0.198675,0.8111666836786771,1.2978666938858834
+199,"frozenset({'path_level_1.0_2.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'qty_/_directory_2.0_3.0'})",0.244925,0.198675,0.8111666836786771,1.2978666938858834
+200,"frozenset({'anchor_files_ratio_0.69_1.0', 'params_length_0.0_157.0'})",0.2489625,0.20815,0.8360696892102224,1.3377115027363558
+201,"frozenset({'anchor_files_ratio_0.69_1.0', 'qty_params_0.0_4.0'})",0.2490625,0.20795,0.834930991217064,1.3358895859473026
+202,"frozenset({'anchor_files_ratio_0.69_1.0', 'prefix_suffix_in_domain_0'})",0.222225,0.1961125,0.8824952188097648,1.4119923500956237
+203,"frozenset({'no_https_0', 'anchor_files_ratio_0.69_1.0'})",0.2098875,0.1903125,0.9067357512953368,1.450777202072539
+204,"frozenset({'anchor_files_ratio_0.69_1.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.248625,0.2078875,0.8361488185017596,1.3378381096028154
+205,"frozenset({'anchor_files_ratio_0.69_1.0', 'params_length_0.0_157.0', 'prefix_suffix_in_domain_0'})",0.2217,0.1959625,0.8839084348218313,1.4142534957149302
+206,"frozenset({'anchor_files_ratio_0.69_1.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.221775,0.195775,0.8827640626761357,1.4124225002818172
+207,"frozenset({'anchor_files_ratio_0.69_1.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2214,0.1957125,0.8839769647696477,1.4143631436314363
+208,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'anchor_files_ratio_0.69_1.0'})",0.2090125,0.1901875,0.9099336164105019,1.4558937862568029
+209,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'anchor_files_ratio_0.69_1.0'})",0.20905,0.190025,0.9089930638603204,1.4543889021765126
+210,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'anchor_files_ratio_0.69_1.0'})",0.208725,0.1899625,0.9101089950892323,1.4561743921427717
+211,"frozenset({'params_length_0.0_157.0', 'image_files_ratio_0.01_0.06'})",0.248125,0.20395,0.8219647355163727,1.3151435768261963
+212,"frozenset({'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06'})",0.2474125,0.2030625,0.8207447077249532,1.3131915323599253
+213,"frozenset({'image_files_ratio_0.01_0.06', 'prefix_suffix_in_domain_0'})",0.223275,0.1916125,0.8581905721643712,1.373104915462994
+214,"frozenset({'no_https_0', 'image_files_ratio_0.01_0.06'})",0.216925,0.1906625,0.8789328108793362,1.406292497406938
+215,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06'})",0.2467375,0.2029125,0.8223820862252393,1.3158113379603829
+216,"frozenset({'params_length_0.0_157.0', 'image_files_ratio_0.01_0.06', 'prefix_suffix_in_domain_0'})",0.2220375,0.19135,0.8617913640713843,1.378866182514215
+217,"frozenset({'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06', 'prefix_suffix_in_domain_0'})",0.221275,0.1904625,0.8607501977177721,1.3772003163484352
+218,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06', 'prefix_suffix_in_domain_0'})",0.220675,0.1903125,0.8624107850911974,1.379857256145916
+219,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'image_files_ratio_0.01_0.06'})",0.21545,0.1904125,0.8837897423996287,1.4140635878394059
+220,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06'})",0.21475,0.1895625,0.8827124563445867,1.4123399301513389
+221,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'image_files_ratio_0.01_0.06'})",0.2143125,0.1894125,0.8838145231846021,1.4141032370953632
+222,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0'})",0.2593125,0.222425,0.8577488551458183,1.3723981682333093
+223,"frozenset({'file_length_13.0_148.0', 'qty_params_0.0_4.0'})",0.2594125,0.2221375,0.8563099310942996,1.3700958897508795
+224,"frozenset({'file_length_13.0_148.0', 'prefix_suffix_in_domain_0'})",0.237625,0.2098875,0.8832719621251973,1.4132351394003158
+225,"frozenset({'no_https_0', 'file_length_13.0_148.0'})",0.2137625,0.1934,0.904742412724402,1.4475878603590433
+226,"frozenset({'file_length_13.0_148.0', 'qty_._domain_2.0_6.0'})",0.2116875,0.1905125,0.8999704753469147,1.4399527605550635
+227,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0', 'qty_params_0.0_4.0'})",0.2586375,0.2220875,0.8586825189696002,1.3738920303513604
+228,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0', 'prefix_suffix_in_domain_0'})",0.2365375,0.20975,0.8867515721608623,1.4188025154573798
+229,"frozenset({'file_length_13.0_148.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2366125,0.2095,0.8854139151566379,1.4166622642506206
+230,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2359375,0.20945,0.8877350993377483,1.4203761589403974
+231,"frozenset({'no_https_0', 'file_length_13.0_148.0', 'params_length_0.0_157.0'})",0.2126625,0.1932625,0.9087756421559984,1.4540410274495974
+232,"frozenset({'no_https_0', 'file_length_13.0_148.0', 'qty_params_0.0_4.0'})",0.2128875,0.1930375,0.9067582643414949,1.4508132229463917
+233,"frozenset({'no_https_0', 'file_length_13.0_148.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.2123125,0.1929875,0.9089785104503975,1.454365616720636
+234,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0', 'qty_._domain_2.0_6.0'})",0.2107625,0.190375,0.9032678963288061,1.4452286341260898
+235,"frozenset({'file_length_13.0_148.0', 'qty_params_0.0_4.0', 'qty_._domain_2.0_6.0'})",0.2106125,0.1901,0.9026054958751261,1.4441687934002017
+236,"frozenset({'params_length_0.0_157.0', 'file_length_13.0_148.0', 'qty_params_0.0_4.0', 'qty_._domain_2.0_6.0'})",0.2101625,0.19005,0.9043002438589187,1.44688039017427
+237,"frozenset({'params_length_0.0_157.0', 'IframeOrFrame_1'})",0.2514125,0.2075875,0.8256848804255955,1.3210958086809528
+238,"frozenset({'IframeOrFrame_1', 'qty_params_0.0_4.0'})",0.2517125,0.2073625,0.8238069225803247,1.3180910761285196
+239,"frozenset({'no_https_0', 'IframeOrFrame_1'})",0.222375,0.1976,0.8885890949971894,1.4217425519955031
+240,"frozenset({'IframeOrFrame_1', 'prefix_suffix_in_domain_0'})",0.228425,0.1968,0.8615519317062493,1.378483090729999
+241,"frozenset({'params_length_0.0_157.0', 'IframeOrFrame_1', 'qty_params_0.0_4.0'})",0.2509,0.2073,0.826225587883619,1.3219609406137904
+242,"frozenset({'no_https_0', 'IframeOrFrame_1', 'params_length_0.0_157.0'})",0.2213375,0.197475,0.8921895295645791,1.4275032473033265
+243,"frozenset({'no_https_0', 'IframeOrFrame_1', 'qty_params_0.0_4.0'})",0.2216,0.19735,0.8905685920577617,1.4249097472924188
+244,"frozenset({'no_https_0', 'IframeOrFrame_1', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.221075,0.1972875,0.8924007689698067,1.4278412303516907
+245,"frozenset({'params_length_0.0_157.0', 'IframeOrFrame_1', 'prefix_suffix_in_domain_0'})",0.227475,0.196675,0.8646005055500604,1.3833608088800966
+246,"frozenset({'IframeOrFrame_1', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.227625,0.1964625,0.8630971993410215,1.3809555189456344
+247,"frozenset({'no_https_0', 'IframeOrFrame_1', 'prefix_suffix_in_domain_0'})",0.20415,0.1876125,0.9189933872152828,1.4703894195444525
+248,"frozenset({'params_length_0.0_157.0', 'IframeOrFrame_1', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.227025,0.1964,0.8651029622288293,1.384164739566127
+249,"frozenset({'params_length_0.0_157.0', 'external_to_internal_ratio_0.24_0.8'})",0.24565,0.1991625,0.8107571748422552,1.2972114797476082
+250,"frozenset({'qty_params_0.0_4.0', 'external_to_internal_ratio_0.24_0.8'})",0.2454625,0.1979125,0.8062840556093089,1.2900544889748944
+251,"frozenset({'prefix_suffix_in_domain_0', 'external_to_internal_ratio_0.24_0.8'})",0.22355,0.189325,0.8469022590024603,1.3550436144039364
+252,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.24_0.8'})",0.24415,0.1978125,0.8102088879787016,1.2963342207659225
+253,"frozenset({'params_length_0.0_157.0', 'prefix_suffix_in_domain_0', 'external_to_internal_ratio_0.24_0.8'})",0.2218,0.188925,0.8517808836789902,1.3628494138863843
+254,"frozenset({'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.24_0.8'})",0.221525,0.1877,0.8473084301997518,1.3556934883196028
+255,"frozenset({'params_length_0.0_157.0', 'prefix_suffix_in_domain_0', 'qty_params_0.0_4.0', 'external_to_internal_ratio_0.24_0.8'})",0.22035,0.1876,0.8513728159745859,1.3621965055593375
+256,"frozenset({'qty_-_url_2.0_19.0', 'prefix_suffix_in_domain_0'})",0.2509875,0.2291625,0.9130434782608696,1.4608695652173913
+257,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0'})",0.2697125,0.22125,0.8203179311303702,1.3125086898085923
+258,"frozenset({'params_length_0.0_157.0', 'qty_-_url_2.0_19.0', 'prefix_suffix_in_domain_0'})",0.2482375,0.2283375,0.919834835590916,1.4717357369454656
+259,"frozenset({'qty_-_url_2.0_19.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.248525,0.2277375,0.9163565033698824,1.4661704053918119
+260,"frozenset({'params_length_0.0_157.0', 'qty_-_url_2.0_19.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2468125,0.227475,0.9216510508989618,1.474641681438339
+261,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'params_length_0.0_157.0'})",0.26685,0.2204375,0.8260727000187372,1.3217163200299795
+262,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'qty_params_0.0_4.0'})",0.2667125,0.2198625,0.824342691099967,1.3189483057599474
+263,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'prefix_suffix_in_domain_0'})",0.2188,0.2064625,0.9436128884826326,1.509780621572212
+264,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.265475,0.2196,0.8271965345136076,1.3235144552217721
+265,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'params_length_0.0_157.0', 'prefix_suffix_in_domain_0'})",0.2169875,0.2056875,0.9479232674693242,1.5166772279509186
+266,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'qty_params_0.0_4.0', 'prefix_suffix_in_domain_0'})",0.2167625,0.2050875,0.9461392076581513,1.513822732253042
+267,"frozenset({'no_https_0', 'qty_-_url_2.0_19.0', 'prefix_suffix_in_domain_0', 'params_length_0.0_157.0', 'qty_params_0.0_4.0'})",0.2159125,0.20485,0.9487639668847334,1.5180223470155734
+268,"frozenset({'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.2448125,0.211375,0.8634158794996172,1.3814654071993875
+269,"frozenset({'qty_params_0.0_4.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.2447875,0.2112125,0.8628402185569116,1.3805443496910585
+270,"frozenset({'PctNullSelfRedirectHyperlinks_0.02_0.11', 'prefix_suffix_in_domain_0'})",0.2161625,0.1978,0.9150523333140577,1.4640837333024923
+271,"frozenset({'no_https_0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.213425,0.1959125,0.9179454140798875,1.46871266252782
+272,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.244375,0.2111,0.8638363171355499,1.3821381074168797
+273,"frozenset({'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11', 'prefix_suffix_in_domain_0'})",0.21575,0.1976625,0.9161645422943221,1.4658632676709153
+274,"frozenset({'qty_params_0.0_4.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11', 'prefix_suffix_in_domain_0'})",0.2157375,0.197525,0.91558027695695,1.46492844313112
+275,"frozenset({'params_length_0.0_157.0', 'qty_params_0.0_4.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11', 'prefix_suffix_in_domain_0'})",0.215375,0.1974125,0.9165989553105048,1.4665583284968078
+276,"frozenset({'no_https_0', 'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.213075,0.1957875,0.9188665962689194,1.470186554030271
+277,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.213075,0.1957,0.9184559427431657,1.4695295083890652
+278,"frozenset({'no_https_0', 'qty_params_0.0_4.0', 'params_length_0.0_157.0', 'PctNullSelfRedirectHyperlinks_0.02_0.11'})",0.21275,0.1955875,0.9193301997649824,1.470928319623972
