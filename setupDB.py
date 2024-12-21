@@ -2,26 +2,18 @@ import sqlite3
 import os
 
 def clean_sql_for_sqlite(input_path, output_path):
-    """
-    Cleans MySQL-specific syntax and adjusts SQL for SQLite compatibility.
-    """
     with open(input_path, 'r') as infile, open(output_path, 'w') as outfile:
         for line in infile:
             # Skip MySQL-specific comments and SET statements
             if line.strip().startswith(("/*!40101", "SET", "START TRANSACTION", "COMMIT")):
                 continue
-            # Remove CHARACTER SET and COLLATE
             line = line.replace("CHARACTER SET utf8mb3", "")
             line = line.replace("CHARACTER SET utf8", "")
             line = line.replace("COLLATE utf8_unicode_ci", "")
-            # Remove DEFAULT CHARSET
             line = line.replace("DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci", "")
-            # Replace AUTO_INCREMENT with AUTOINCREMENT
             line = line.replace("AUTO_INCREMENT", "AUTOINCREMENT")
-            # Write the cleaned line to the output file
             outfile.write(line)
 
-# Paths for input and output SQL files
 input_sql_file = 'dataset/index.sql'
 cleaned_sql_file = 'dataset/cleaned_index.sql'
 
@@ -30,15 +22,11 @@ print(f"Cleaned SQL file saved to {cleaned_sql_file}")
 
 
 def execute_sql_file(file_path, connection):
-    """
-    Executes an SQL file on a given SQLite database connection.
-    """
     with open(file_path, 'r') as file:
         sql_commands = file.read()
     cursor = connection.cursor()
     
     try:
-        # Split commands by semicolon and execute each one
         for command in sql_commands.split(';'):
             command = command.strip()
             if command:
@@ -56,7 +44,6 @@ database_path = 'dataset/database.db'
 if os.path.exists(database_path):
     os.remove('dataset/database.db')
     
-# Connect to the SQLite database and execute the script
 try:
     conn = sqlite3.connect(database_path)
     execute_sql_file(cleaned_sql_file, conn)

@@ -86,11 +86,10 @@ def extract_parameter_features(url):
     return features
 
 def external_metrics(url):
-    # Simulate some metrics; replace with API calls or computations where needed
     features = {
-        "time_response": -1,  # Placeholder, e.g., use requests.get(url).elapsed.total_seconds()
-        "domain_spf": -1,    # Placeholder for SPF record check
-        "asn_ip": -1,        # Placeholder for ASN lookup
+        "time_response": -1,  
+        "domain_spf": -1,   
+        "asn_ip": -1,       
         "time_domain_activation": -1,
         "time_domain_expiration": -1,
         "qty_ip_resolved": -1,
@@ -156,12 +155,11 @@ def features_from_associative_classification_paper(url):
         "subdomain_count": domain.count('.'),
         # "abnormal_url": int(not bool(re.match(r"^(https?|ftp)://[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", url))), # Query WHOIS database
         # "dns_record": int(bool(domain)),  # Simulated as presence of domain
-        # "age_of_domain": -1  # Placeholder for WHOIS lookup
+        # "age_of_domain": -1 
     }
 
     return features
 
-# Example usage
 # url = "http://example.com.ca.hello.au.fr.com/path/to/resource/index.php?query=reza@gmail.c&gewfwe"
 # print(len(extract_url_features(url)))
 # print(extract_url_features(url)['domain_in_subdomains'])

@@ -18,7 +18,6 @@ def extract_website_features(website, url):
             with zip_file.open(file_path_in_zip) as file:
                 html_content = file.read()
                 return parse_html_and_extract_features(html_content, url)
-    # If file is not found in any zip, return default values
     return default_values
 
 def parse_html_and_extract_features(html_content, url):
@@ -128,7 +127,6 @@ def extract_login_form_features(soup, base_domain):
 def extract_url_features(soup, base_url):
     base_domain = urlparse(base_url).netloc
 
-    # Extract anchor tags (hyperlinks)
     anchor_tags = soup.find_all('a', href=True)
     total_hyperlinks = len(anchor_tags)
     external_hyperlinks = 0
@@ -141,7 +139,6 @@ def extract_url_features(soup, base_url):
         except:
             pass
 
-    # Extract resource tags (scripts, images, stylesheets)
     resource_tags = soup.find_all(['script', 'img', 'link'], src=True)
     total_resources = len(resource_tags)
     external_resources = 0
@@ -154,7 +151,6 @@ def extract_url_features(soup, base_url):
         except:
             pass
 
-    # Check for external favicon
     favicon = soup.find('link', rel='icon')
     favicon_external = favicon and 'href' in favicon and base_domain not in urlparse(favicon['href']).netloc
 
@@ -193,7 +189,6 @@ def extract_form_features(soup, base_url):
     }
 
 def extract_hyperlink_and_redirection_features(soup, base_url):
-    # Function to calculate the percentage of null self-redirect hyperlinks
     def calculate_pct_null_self_redirect_links(soup, base_url):
         all_links = soup.find_all('a')
         null_self_redirect_links = 0
@@ -206,11 +201,9 @@ def extract_hyperlink_and_redirection_features(soup, base_url):
         total_links = len(all_links)
         return null_self_redirect_links / total_links if total_links > 0 else 0
 
-    # Function to check frequent domain name mismatch
     def check_frequent_domain_mismatch(soup, base_url):
         base_domain = urlparse(base_url).netloc
 
-        # Extract all domains from href attributes
         all_domains = []
         for tag in soup.find_all('a', href=True):
             href = tag.get('href')
@@ -222,13 +215,12 @@ def extract_hyperlink_and_redirection_features(soup, base_url):
                 except:
                     pass
 
-        # Count occurrences of each domain
         domain_counts = Counter(all_domains)
         most_frequent_domain = domain_counts.most_common(1)
 
         if most_frequent_domain:
             most_frequent_domain = most_frequent_domain[0][0]
-            return most_frequent_domain != base_domain  # True if mismatch, False otherwise
+            return most_frequent_domain != base_domain  
         return False  # No domains to compare
     
     return {
@@ -237,15 +229,12 @@ def extract_hyperlink_and_redirection_features(soup, base_url):
     }
 
 def extract_javascript_html_features(soup):
-    # Find all scripts and tags with attributes
     scripts = soup.find_all('script')
     tags_with_attrs = soup.find_all(attrs=True)
 
-    # Detect Fake Links in Status Bar
     fake_link_in_status_bar = False
     for tag in tags_with_attrs:
         if 'onmouseover' in tag.attrs:
-            # Check if onMouseOver contains JavaScript modifying the status bar
             js_code = tag.attrs.get('onmouseover', '')
             if 'window.status' in js_code or 'status=' in js_code:
                 fake_link_in_status_bar = True
@@ -256,18 +245,14 @@ def extract_javascript_html_features(soup):
             fake_link_in_status_bar = True
             break
 
-    # Detect Right-Click Disabled
     right_click_disabled = any("contextmenu" in script.text for script in scripts) or \
                            any("oncontextmenu" in tag.attrs for tag in tags_with_attrs)
 
-    # Detect Popup Window Creation
     popup_window = any("window.open" in script.text for script in scripts)
 
-    # Detect Submitting Information to Email
     submit_to_email = any('mailto:' in (tag.get('href', '') or '') for tag in soup.find_all('a', href=True)) or \
                       soup.find_all(string=lambda text: 'mailto:' in text if text else False)
 
-    # Count Iframes and Frames
     iframe_or_frame_count = len(soup.find_all(['iframe', 'frame']))
 
     return {
@@ -342,8 +327,5 @@ html_example = """
 </html>
 """
 
-# Call the function
 # features = parse_html_and_extract_features(html_example, 'http://malicious.com')
-
-# Print the extracted features
 # print(len(features))
